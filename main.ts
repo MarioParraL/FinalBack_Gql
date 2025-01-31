@@ -6,7 +6,6 @@ import { CosaModel } from "./types.ts";
 const MONGO_URL = Deno.env.get("MONGO_URL");
 if (!MONGO_URL) {
   throw new Error("Please provide a MONGO_URL");
-  Deno.exit(1);
 }
 
 const mongoClient = new MongoClient(MONGO_URL);
